@@ -1,4 +1,5 @@
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 const DNSAPIs = axios.create({
   baseURL: "https://aws-dns-records-manager.vercel.app/api/dns",
