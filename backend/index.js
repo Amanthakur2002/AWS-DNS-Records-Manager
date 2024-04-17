@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: ["https://aws-dns-records-manager-frontend.vercel.app"],
+        origin: ["*"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
