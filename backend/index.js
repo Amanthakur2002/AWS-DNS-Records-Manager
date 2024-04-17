@@ -6,17 +6,6 @@ import domainRoutes from "./Routes/domainRoutes.js"
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// app.use(
-//     cors({
-//         origin: "*",
-//         methods: ["GET", "POST", "PUT", "DELETE"],
-//         credentials: true
-//     })
-// );
-
 app.use(cors(
     {
         origin: ["https://aws-dns-records-manager-frontend.vercel.app"],
@@ -24,6 +13,9 @@ app.use(cors(
         credentials: true
     }
 ));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/dns", dnsRoutes);
 app.use("/api/domain", domainRoutes)
