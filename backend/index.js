@@ -17,7 +17,20 @@ app.use(
     })
 );
 
+// app.use(cors(
+//     {
+//         origin: ["https://deploy-mern-frontend.vercel.app"],
+//         methods: ["POST", "GET"],
+//         credentials: true
+//     }
+// ));
+
 // app.use("/", route);
+
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
+
 app.use("/api/dns", dnsRoutes);
 app.use("/api/domain", domainRoutes)
 
