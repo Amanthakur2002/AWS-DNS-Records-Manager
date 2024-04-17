@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const DOMAINAPIs = axios.create({
-  baseURL: "http://localhost:8080/api/domain",
-  // baseURL : `https://aws-dashboard.onrender.com/api/domain`
+  baseURL: "https://aws-dns-records-manager.vercel.app/api/domain",
 });
 
 export async function listDomains() {
